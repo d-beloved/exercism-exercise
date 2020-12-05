@@ -14,11 +14,16 @@
 #   # ...
 #   # ...
 #
-#   main () {
-#     # your main function code here
-#   }
-#
-#   # call main with all of the positional arguments
-#   main "$@"
+main () {
+  # your main function code here
+  if [[ $1 ]]; then
+    echo "One for $1, one for me."
+  else
+    echo "One for you, one for me."
+  fi
+}
+
+# call main with all of the positional arguments
+main "$@"
 #
 # *** PLEASE REMOVE THESE COMMENTS BEFORE SUBMITTING YOUR SOLUTION ***
