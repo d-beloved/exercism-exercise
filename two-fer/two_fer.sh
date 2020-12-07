@@ -1,12 +1,8 @@
 #!/usr/bin/env bash
 
 main () {
-  if [[ $1 ]]; then
-    echo "One for $1, one for me."
-  else
-    echo "One for you, one for me."
-  fi
+  a=$([ "$#" -ne 0 ] && echo "$1" || echo "you")
+  echo "One for $a, one for me."
 }
 
 main "$@"
-
